@@ -4,7 +4,7 @@ import './styles.scss'
 function FooterForm () {
   return (
         <div className="container-forms-footer">
-            <a href='#'> I fogot my password . Click here to reset </a>
+            <a href='#'> I forgot my password . Click here to reset </a>
             <Button nameButton='Register New Account' classAbtract='inverse' />
         </div>
   )

@@ -26,3 +26,11 @@
     line-height:1em;
     padding-top:.7em;
   }
+
+  @media (max-width:600px){
+    .header-forms-Logo{
+      width: 3em;
+    }
+    .header-forms-Titule{font-size : 1.7em;}
+    .header-forms-Footer-log{font-size : .7em;}
+  }

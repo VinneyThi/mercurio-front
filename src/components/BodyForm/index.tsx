@@ -9,7 +9,7 @@ function BodyForm () {
         <div className='body-forms-container'>
             <form className='container-form'>
             <FormInputs labelName='Username' logoUse={LogoUserInput} />
-            <FormInputs labelName='Passworld' logoUse={LogoPasswordInput} type='password'/>
+            <FormInputs labelName='Password' logoUse={LogoPasswordInput} type='password'/>
             <Button nameButton='Login' type='submit'/>
             </form>
         </div>
