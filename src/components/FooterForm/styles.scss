@@ -1,0 +1,19 @@
+.container-forms-footer {
+    max-width: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .7em;
+
+    a {
+        text-decoration: inherit;
+        /* no underline */
+        color: #4A5568;
+
+    }
+
+    button{
+        margin-top: 15px;
+    }
+}

@@ -1,0 +1,28 @@
+.header-forms-container{
+    max-width:80%;
+    width:100%;
+    padding-top:45px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap: .3em;
+  }
+  
+  .header-forms-Logo{
+    width: 5em;
+  }
+  .header-forms-Titule{
+    font-family:Roboto;
+    font-weight:bold;
+    font-size:2.2em;
+    color:#667EEA;
+    line-height:1em;
+  }
+  
+  .header-forms-Footer{
+      font-family:Roboto;
+    font-size:1.1em;
+    color:#667EEA;
+    line-height:1em;
+    padding-top:.7em;
+  }
