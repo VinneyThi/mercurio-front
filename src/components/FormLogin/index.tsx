@@ -1,5 +1,5 @@
 
-import { createContext, useState, useEffect, SetStateAction, Dispatch } from 'react'
+import { createContext, useState, useEffect } from 'react'
 import HeaderForm from '../HeaderForm'
 import BodyForm from '../BodyForm'
 import FooterForm from '../FooterForm'
@@ -8,7 +8,7 @@ import './styles.scss'
 
 interface ILoginCredentials{
   loginCredentials:string,
-  setLoginCredentials: Dispatch<SetStateAction<string>>
+  chypher : (input:string)=> void
 }
 
 export const FormLoginContex = createContext<ILoginCredentials | {}>({})
@@ -16,10 +16,15 @@ export const FormLoginContex = createContext<ILoginCredentials | {}>({})
 function FormLogin () {
   const [loginCredentials, setLoginCredentials] = useState('')
 
+  function chypher (input: string) {
+    if (input !== '') {
+      const chyperpayload = chypherClient.chypher(input)
+      setLoginCredentials(chyperpayload)
+    }
+  }
   useEffect(() => {
-    const chyperpayload = chypherClient.chypher(loginCredentials)
-    console.log('Cryp', chyperpayload)
-    console.log('DecRYP', chypherClient.dechypher(chyperpayload))
+    console.log(loginCredentials)
+    console.log(chypherClient.dechypher(loginCredentials))
   }, [loginCredentials])
 
   return (
@@ -27,7 +32,7 @@ function FormLogin () {
             <div className="body">
                 <div className="body-ground">
                 </div>
-                <FormLoginContex.Provider value={{ loginCredentials, setLoginCredentials }}>
+                <FormLoginContex.Provider value={{ loginCredentials, chypher }}>
                   <HeaderForm />
                   <BodyForm />
                   <FooterForm />
