@@ -13,8 +13,8 @@ class CryptoJSHelper implements ICrprypto {
   }
 
   dechypher (input:string) : string {
-    const result = CryptoJS.AES.decrypt(input, this.saltGen).toString()
-    return result
+    const result = CryptoJS.AES.decrypt(input, this.saltGen)
+    return result.toString(CryptoJS.enc.Utf8)
   }
 }
 
